@@ -1,0 +1,47 @@
+@model ConfigurationModel
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="content-header clearfix">
+    <h1 class="float-left">
+        Clym CMP
+        <small>
+            <i class="fas fa-arrow-circle-left"></i>
+            <a asp-action="List" asp-controller="Plugin">@T("Admin.Configuration.Plugins.BackToList")</a>
+        </small>
+    </h1>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="form-horizontal">
+            <div class="cards-group">
+                <div class="card card-default narrow-card">
+                    <div class="card-body">
+                        <div asp-validation-summary="All"></div>
+                        <form asp-controller="ClymCmp" asp-action="Configure" method="post">
+                            <nop-antiforgery-token />
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <nop-label asp-for="WidgetId" />
+                                </div>
+                                <div class="col-md-9">
+                                    <nop-editor asp-for="WidgetId" />
+                                    <span asp-validation-for="WidgetId"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-9 offset-md-3">
+                                    <button type="submit" name="save" class="btn btn-primary">
+                                        @T("Admin.Common.Save")
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

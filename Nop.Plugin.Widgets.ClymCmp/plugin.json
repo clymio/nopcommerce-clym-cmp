@@ -1,0 +1,14 @@
+{
+  "Group": "Widgets",
+  "FriendlyName": "Clym CMP",
+  "SystemName": "Widgets.ClymCmp",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Clym Inc.",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.ClymCmp.dll",
+  "Description": "Inject the Clym Widget into your nopCommerce store's head section. Learn more: https://knowledge.clym.io/en/article/clym-plugins-jeagzs/",
+  "LimitedToStores": [],
+  "LimitedToCustomerRoles": [],
+  "DependsOnSystemNames": []
+}

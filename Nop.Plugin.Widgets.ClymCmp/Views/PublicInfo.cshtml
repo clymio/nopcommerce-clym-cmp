@@ -1,0 +1,7 @@
+@model string
+@{
+    Layout = string.Empty;
+    var widgetId = Html.Encode(Model);
+}
+<script asp-location="None" src='https://config.clym-widget.net/v2/@(widgetId).js'></script>
+<script asp-location="None" src='https://widget-next.clym-sdk.net/v2/stub.js' data-property='@widgetId'></script>

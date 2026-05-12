@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Copyright>Copyright © Clym Inc. 2024</Copyright>
+    <Company>Clym Inc.</Company>
+    <Authors>Clym Inc.</Authors>
+    <PackageId>Nop.Plugin.Widgets.ClymCmp</PackageId>
+    <Version>1.0.0</Version>
+    <Description>Clym CMP widget integration for nopCommerce 4.70</Description>
+    <PackageProjectUrl>https://github.com/clymio/nopcommerce-clym-cmp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/clymio/nopcommerce-clym-cmp</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputPath>..\..\Presentation\Nop.Web\Plugins\Widgets.ClymCmp\</OutputPath>
+    <OutDir>$(OutputPath)</OutDir>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="plugin.json" />
+    <EmbeddedResource Include="plugin.json" />
+    <Content Include="plugin.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
